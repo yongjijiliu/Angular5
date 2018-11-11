@@ -9,7 +9,7 @@
         <a href="#">Home</a>
       </li>
       <li>
-        <a href="#">Page 1</a>
+        <a  [routerLink]="['/table']">Page 1</a>
       </li>
       <li>
         <a href="#">Page 2</a>
@@ -61,7 +61,11 @@
           <tab heading="Tab 2">Basic content for tab 2</tab>
           <tab heading="Tab 3">Basic content for tab 3</tab>
         </tabset>
-      </div>
-  </div> 
+    </div>   
+    
+    <br>
+    <h2>路右测试部分</h2> 
+    <router-outlet></router-outlet>
+    </div> 
 
 </div>
