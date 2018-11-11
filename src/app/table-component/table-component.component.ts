@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-table-component',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponentComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private routeInfo: ActivatedRoute) { }
+  private TableRowNum: number;
   ngOnInit() {
+    //参数快照
+    //this.TableRowNum = this.routeInfo.snapshot.queryParams['id'];
+    //this.TableRowNum = this.routeInfo.snapshot.params['id'];
+
+
+    //参数订阅
+    this.routeInfo.params.subscribe((params: Params) => this.TableRowNum = params['id']);
+
   }
 
 }

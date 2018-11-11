@@ -9,7 +9,8 @@
         <a href="#">Home</a>
       </li>
       <li>
-        <a  [routerLink]="['/table']">Page 1</a>
+        <!-- <a  [routerLink]="['/table']" [queryParams]="{id : 100}">table路由测试连接</a> -->
+        <a  [routerLink]="['/table',100]">table路由测试连接</a>
       </li>
       <li>
         <a href="#">Page 2</a>
@@ -29,7 +30,7 @@
             <a class="nav-link active" href="#">Active</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" [routerLink]="['/table',123]">连接测试</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
