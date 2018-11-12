@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TableComponentComponent } from './table-component/table-component.component';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-    { path: 'table/:id', component: TableComponentComponent }
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    {
+        path: 'home', component: HomeComponent, children: [
+            { path: '', component: AboutComponent },
+            { path: 'table/:id', component: TableComponentComponent },
+        ]
+    },
+
+    //重定向 
+    //{ path: '', redirectTo:'/home',pathMatch :'full' },
 ];
 
 @NgModule({
