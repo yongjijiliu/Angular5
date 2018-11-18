@@ -2,21 +2,21 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">测试页面</a>
+      <a class="navbar-brand" href="#">故事集</a>
     </div>
     <ul class="nav nav-pills">
       <li>
-        <a href="#">Home</a>
+        <a href="#">主页</a>
       </li>
       <li>
         <!-- <a  [routerLink]="['/table']" [queryParams]="{id : 100}">table路由测试连接</a> -->
-        <a  [routerLink]="['/table',100]">table路由测试连接</a>
+        <a [routerLink]="['/table',100]">风采展示</a>
       </li>
       <li>
-        <a href="#">Page 2</a>
+        <a href="#">基本设置</a>
       </li>
       <li>
-        <a href="#">Page 3</a>
+        <a href="#">联系我们</a>
       </li>
     </ul>
   </div>
@@ -24,50 +24,79 @@
 
 
 <div class="container">
-   <div class="col-md-3">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-3 col-md-5 col-lg-4">
       <ul class="nav nav-pills nav-stacked">
-          <li>
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li >
-            <a class="nav-link">Link</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li>
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-   </div>
-  <div class="col-md-9">    
-      <h2>路右测试部分</h2> 
+        <li>
+          <a class="nav-link active" href="#">人员管理</a>
+        </li>
+        <li>
+          <a class="nav-link">权限管理</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">密码管理</a>
+        </li>
+        <li>
+          <a class="nav-link disabled" href="#">参数管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-7 col-lg-8">
+      <h2>测试部分</h2>
       <router-outlet></router-outlet>
 
-    <h2>Accordion Example</h2>
-    <accordion>
-      <accordion-group heading="Static Header, initially expanded">
-        This content is straight in the template.
-      </accordion-group>
-      <accordion-group heading="Another group">
-        <p>Some content</p>
-      </accordion-group>
-      <accordion-group heading="Another group">
-        <p>Some content</p>
-      </accordion-group>
-    </accordion>
+      <h2>手风琴</h2>
+      <accordion>
+        <accordion-group heading="Static Header, initially expanded">
+          <table>
+            <tr>序号</tr>
+            <tr>姓名</tr>
+            <tr>年龄</tr>
+            <tr>注册时间</tr>
+          </table>
+        </accordion-group>
+        <accordion-group heading="Another group">
+          <p>Some content</p>
+        </accordion-group>
+        <accordion-group heading="Another group">
+          <p>Some content</p>
+        </accordion-group>
+      </accordion>
 
-    <br>
-    <h2>Tabs Example</h2>
-    <div>
+      <br>
+      <h2>选项卡</h2>
+      <div>
         <tabset>
           <tab heading="Tab 1" id="tab1">Basic content for tab 1</tab>
           <tab heading="Tab 2">Basic content for tab 2</tab>
           <tab heading="Tab 3">Basic content for tab 3</tab>
         </tabset>
-    </div>   
-    
-    <br>
-    </div> 
+      </div>
+
+      <br>
+
+      <h2>进度条</h2>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+          aria-valuemax="100" style="width: 80%">
+         80%
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+          2%
+        </div>
+      </div>
+
+      <div class="progress">
+          <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+            <span class="sr-only">60% Complete (warning)</span>
+          </div>
+        </div>
+        
+
+    </div>
+  </div>
 
 </div>
